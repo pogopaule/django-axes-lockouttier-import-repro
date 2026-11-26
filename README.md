@@ -22,7 +22,8 @@ Which `AXES_*` setting is reported missing depends on which code reads one first
 (with `django.contrib.admin` installed it is `AXES_ACCESS_FAILURE_LOG_PER_USER_LIMIT`).
 Defining that setting by hand only moves the error to the next one.
 
-Removing the `axes.conf` import and `AXES_LOCKOUT_TIERS` from `reproproject/settings.py` makes `check` pass.
+Removing the `axes.conf` import and `AXES_LOCKOUT_TIERS` from `reproproject/settings.py` makes Django start;
+`check` then only reports axes' usual setup hints (W002 middleware, W003 backend), which are irrelevant here.
 
 ## Why
 
